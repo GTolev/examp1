@@ -1,0 +1,53 @@
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+body {
+	background: $default-default-background;
+	font-family: $default-font-family-regular;
+}
+
+button, a {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+svg {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+
+	path, line {
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.my-main {
+	grid-area: main;
+	padding: 0 4%;
+}
+
+.main-wrap {
+	position: relative;
+	display: grid;
+  grid:
+	'header' minmax(auto, 120px)
+	'main' minmax(auto, calc(100vh - 288px))
+	'footer' minmax(auto, 120px);
+  grid-template-columns: 1fr;
+  grid-gap: 4%;
+  row-gap: 24px;
+  width: 100%;
+}

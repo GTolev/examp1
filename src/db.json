@@ -1,0 +1,25 @@
+{ 
+  "tbl": [
+    {
+      "id": 0,
+      "name": "Building 1",
+      "area": "1500",
+      "location": "some address 1",
+      "img": ""
+    },
+    {  
+      "id": 1,
+      "name": "Building 2",
+      "area": "2000",
+      "location": "some address 2",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "name": "Building 3",
+      "area": "2500",
+      "location": "some address 3",
+      "img": ""
+    }
+  ]
+}

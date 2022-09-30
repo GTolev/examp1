@@ -1,0 +1,55 @@
+// set default breakpoints
+$breakPoints-xs: 320px;
+$breakPoints-s: 576px;
+$breakPoints-m: 768px;
+$breakPoints-l: 992px;
+$breakPoints-xl: 1200px;
+$breakPoints-xxl: 1600px;
+
+// start media queries mixin
+@mixin min-width-media($query) {
+  @media  (min-width: $query) {
+    @content;
+  }
+}
+
+@mixin max-width-media($query) {
+  @media (max-width: $query) {
+    @content;
+  }
+}
+
+@mixin between-width-media($query-small, $query-big) {
+  @media (min-width: $query-small) and (max-width: $query-big) {
+    @content;
+  }
+}
+
+// start fluid mixin
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+//@include fluid-type(font-size, 320px, 1366px, 14px, 18px);
+// end fluid mixin

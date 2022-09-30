@@ -1,0 +1,48 @@
+.form {
+  &__element {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+
+    & > * {
+      flex: 0 0 48%;
+      max-width: 48%;
+    }
+
+    input {
+      padding: 5px 15px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    &.error {
+      margin-bottom: 5px;
+
+      input {
+        border: 1px solid $default-error-color;
+      }
+    }
+  }
+
+  &__error {
+    margin-bottom: 15px;
+    color: $default-error-color;
+    @include fluid-type(font-size, 320px, 1920px, 14px, 18px);
+  }
+
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    button {
+      display: inline-flex;
+      padding: 5px 15px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+  }
+}

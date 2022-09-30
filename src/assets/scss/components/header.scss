@@ -1,0 +1,19 @@
+.my-header {
+  grid-area: header;
+
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 4%;
+  background: gray;
+
+  &__text {
+    color: #fff;
+    @include fluid-type(font-size, 320px, 1920px, 20px, 40px);
+  }
+
+  &__avatar {
+    width: 40px;
+  }
+}

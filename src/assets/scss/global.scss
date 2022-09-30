@@ -1,0 +1,19 @@
+/* global.scss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+//@import "components/fonts";
+@import "components/breakpoints";
+@import "components/variables";
+@import "components/multiSelect/vue-multiselect";
+@import "components/modal.scss";
+@import "components/form.scss";
+
+@import "components/basic.scss";
+@import "components/footer.scss";
+@import "components/header.scss";
+
+@import "components/home.scss";
+@import "components/welcome.scss";

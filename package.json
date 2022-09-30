@@ -1,6 +1,6 @@
 {
-  "name": "website",
-  "title": "Phos website",
+  "name": "next-it",
+  "title": "next-it",
   "version": "0.0.0",
   "scripts": {
     "db:serve": "json-server --watch db.json --port=3001",
